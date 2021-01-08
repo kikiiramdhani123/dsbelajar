@@ -32,7 +32,7 @@
                 <div class="mt-4">
                     <div class="row">
                         <?php foreach ($dataKelas10 as $d) : ?>
-                            <div class="col-md-3 bg-warning ml-3">
+                            <div class="col-md-3 bg-warning ml-3 mb-2">
                                 <h2><?= $d['mapel']; ?></h2>
                                 <h4><?= $d['guru']; ?></h4>
                                 <a href="<?= $d['link']; ?>">
@@ -55,7 +55,7 @@
                 <div class="mt-4">
                     <div class="row">
                         <?php foreach ($dataKelas11 as $d) : ?>
-                            <div class="col-md-3 bg-warning ml-3">
+                            <div class="col-md-3 bg-warning ml-3 mb-2">
                                 <h2><?= $d['mapel']; ?></h2>
                                 <h4><?= $d['guru']; ?></h4>
                                 <a href="<?= $d['link']; ?>">
@@ -77,7 +77,7 @@
                 <div class="mt-4">
                     <div class="row">
                         <?php foreach ($dataKelas12 as $d) : ?>
-                            <div class="col-md-3 bg-warning ml-3">
+                            <div class="col-md-3 bg-warning ml-3 mb-2">
                                 <h2><?= $d['mapel']; ?></h2>
                                 <h4><?= $d['guru']; ?></h4>
                                 <a href="<?= $d['link']; ?>">
