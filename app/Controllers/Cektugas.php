@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Models\tugasM;
 
-class Tugas extends BaseController
+class Cektugas extends BaseController
 {
     protected $tugasM;
     public function __construct()
@@ -15,12 +15,19 @@ class Tugas extends BaseController
     {
         // $dataTugas = $this->tugasM->orderBy('pemberianTugas', 'DESC')->findAll();
         //$dataBelajar = $this->belajarM->findAll();
+        $keyword = $this->request->getVar('keyword');
+        if ($keyword) {
+            $tugas = $this->tugasM->orderBy('pemberianTugas', 'DESC')->search($keyword);
+        } else {
+            $tugas = $this->tugasM->orderBy('pemberianTugas', 'DESC');
+        }
+
         $currentPage = $this->request->getVar('page_tugas') ? $this->request->getVar('page_tugas') : 1;
         $data = [
             'title' => "Cek Tugas | Sibol DS",
             //'dataBelajar' => $dataBelajar,
             // 'dataTugas' => $dataTugas,
-            'dataTugas' => $this->tugasM->orderBy('pemberianTugas', 'DESC')->paginate(10, 'tugas'),
+            'dataTugas' => $tugas->orderBy('pemberianTugas', 'DESC')->paginate(10, 'tugas'),
             'pager' => $this->tugasM->pager,
             'currentPage' => $currentPage
 

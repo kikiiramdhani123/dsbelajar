@@ -34,7 +34,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/tambahmapel', 'Admin::index');
 $routes->get('/jadwalpelajaran', 'Jadwal::index');
-$routes->get('/cektugas', 'Tugas::index');
+$routes->get('/cektugas', 'Cektugas::index');
 $routes->get('/tambahtugas', 'Admin::indexTambahTugas');
 
 /**
