@@ -20,7 +20,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php $i = 1 ?>
+            <?php $i = 1 + (10 * ($currentPage - 1)); ?>
             <?php foreach ($dataTugas as $d) : ?>
                 <tr>
 
@@ -36,5 +36,7 @@
             <?php endforeach; ?>
         </tbody>
     </table>
+    <?= $pager->links('tugas', 'tugasPagination') ?>
+
 </section>
 <?= $this->endSection(); ?>
